@@ -133,8 +133,6 @@ table {
 }
 
 html {
-  max-width: 1920px;
-  min-width: 428px;
   width: 100%;
   font-size: 62.5%;
 }
@@ -170,7 +168,8 @@ h3 {
 
 p,
 a {
-  font-size: 3rem;
+  font-size: 2rem;
+  width: auto;
 }
 
 * {
@@ -190,7 +189,7 @@ header > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(0, 4, 17, .8);​​
+  background-color: rgb(0, 4, 17, 0.8);
 }
 
 nav {
@@ -231,9 +230,8 @@ nav {
 }
 
 .gallery img {
-    width: 21%;
-    margin: 2%;
-
+  width: 21%;
+  margin: 2%;
 }
 
 /* about us section */
@@ -321,35 +319,33 @@ footer {
 }
 
 footer div {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .copyright {
-   text-align: right; 
-   font-size: 2rem;
-   padding: 0 3%;
+  text-align: right;
+  font-size: 2rem;
+  padding: 0 3%;
 }
 
 footer form {
-    width: 30%;
-    font-size: 3.2rem;
-    text-align: center;
-    padding-left: 3%;
+  width: 30%;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-left: 3%;
 }
 
 footer input {
-    font-size: 2rem;
-    width: 55%;
+  font-size: 2rem;
+  width: 55%;
 }
 
 footer button {
-    color: rgb(0, 4, 17) ;
-    font-size: 2rem;
-    padding: 0 5%;
-
+  color: rgb(0, 4, 17);
+  font-size: 2rem;
+  padding: 0 5%;
 }
-
 
 /* mobile media query */
 @media (max-width: 500px) {
@@ -360,10 +356,18 @@ footer button {
   nav {
     flex-direction: column;
     align-content: center;
+    display: flex;
   }
 
   nav a {
     text-align: center;
+    width: auto;
+  }
+
+  .social {
+    flex-direction: column;
+    align-content: center;
+    display: flex;
   }
 
   h2 {
@@ -392,7 +396,7 @@ footer button {
   }
 
   .about-container .text {
-    width: 85%;
+    width: 95%;
   }
 
   /* contact us section */
@@ -451,6 +455,4 @@ footer button {
   .text p {
     font-size: 3rem;
   }
-
-  
 }

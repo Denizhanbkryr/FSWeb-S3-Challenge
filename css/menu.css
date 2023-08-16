@@ -130,11 +130,12 @@ table {
 
 * {
   box-sizing: border-box;
+  color: rgb(225, 239, 230);
 }
 
 html {
-  max-width: 1920px;
-  min-width: 428px;
+  width: 100%;
+
   font-size: 62.5%;
 }
 
@@ -173,7 +174,8 @@ h4 {
 
 p,
 a {
-  font-size: 3rem;
+  font-size: 2rem;
+  width: auto;
 }
 
 /* header section */
@@ -184,6 +186,32 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: rgb(225, 239, 230);
+}
+
+header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 4, 17, 0.8);
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.social-media {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.social-media i {
+  font-size: 1em;
+  margin: 1% 4%;
 }
 
 /* spacer */
@@ -204,39 +232,209 @@ header {
   width: 100%;
   height: auto;
   background-image: url("../img/staff-bartender.jpg");
-  background-color: rgb(0, 4, 17);
+  background-color: rgb(222, 223, 227);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: rgb(15, 16, 16);
+}
+
+.menu h1 {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-item {
+  font-size: 4rem;
+  border-bottom: 2px;
+}
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(0, 4, 17, 0.8);
+  flex-wrap: wrap;
+}
+section {
+  width: 45%;
+  display: block;
+  margin-top: 30px;
+}
+
+.item-price {
+  width: 25%;
+  display: inline-block;
+  text-align: right;
+}
+
+.item-name {
+  font-size: 4rem;
+  display: inline-block;
+  width: 70%;
 }
 
 /* footer section */
 footer {
   width: 100%;
-  height: 15vh;
+  /*height: 15vh;*/
   padding-top: 2.5vh;
   font-size: 3rem;
+  background-color: rgb(0, 4, 17);
+  color: rgb(225, 239, 230);
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  text-align: right;
+  font-size: 2rem;
+  padding: 0 3%;
+  margin-left: 30%;
+}
+
+footer form {
+  width: 30%;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-left: 3%;
+}
+
+footer input {
+  font-size: 2rem;
+  width: 55%;
+}
+
+footer button {
+  color: rgb(0, 4, 17);
+  font-size: 2rem;
+  padding: 0 5%;
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
   /* header section */
-  .header-title {
-    width: 75%;
-    margin: 0 auto;
+  * {
+    color: black;
+  }
+
+  header a {
+    font-size: 3rem;
+  }
+  header h1 {
     text-align: center;
-    font-size: 4rem;
+    color: white;
+  }
+  nav {
+    flex-direction: column;
+    align-content: center;
+    display: flex;
+  }
+
+  nav a {
+    text-align: center;
+    color: white;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-content: center;
+    display: flex;
+  }
+  .social-media i {
+    color: white;
   }
 
   /* menu */
+
   .menu {
     background-image: none;
   }
 
+  .menu-container {
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(225, 239, 230);
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .item-name {
+    text-align: center;
+    display: block;
+    width: auto;
+  }
+  .item-price {
+    text-align: center;
+    display: block;
+    width: auto;
+  }
+
+  p,
+  h3 {
+    text-align: center;
+  }
+
+  footer p {
+    color: white;
+  }
+
+  .menu h3 {
+    border: 5px solid black;
+    width: 80%;
+    margin: auto;
+  }
+
+  .menu-item {
+    border-bottom: 4px solid black;
+    width: 80%;
+    margin: auto;
+  }
+
+  .menu h1 {
+    border-bottom: 20px solid black;
+    width: 70%;
+  }
+
   /* footer section */
+
   footer {
     height: auto;
     padding-top: 2.5vh;
     font-size: 2rem;
+  }
+
+  footer div {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  footer form {
+    width: 100%;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: auto;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .text h3 {
+    font-size: 4rem;
+  }
+
+  .text p {
+    font-size: 3rem;
   }
 }
